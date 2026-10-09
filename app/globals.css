@@ -1,0 +1,99 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@theme inline {
+  --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-nunito), ui-sans-serif, system-ui, sans-serif;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--foreground);
+  --color-popover: var(--card);
+  --color-popover-foreground: var(--foreground);
+  --color-muted: var(--primary-50);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-input: var(--border);
+  --color-ring: var(--primary);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: #ffffff;
+  --color-primary-dark: var(--primary-dark);
+  --color-primary-100: var(--primary-100);
+  --color-primary-50: var(--primary-50);
+
+  --color-secondary: var(--primary-50);
+  --color-secondary-foreground: var(--primary);
+
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--foreground);
+  --color-accent-50: var(--accent-50);
+
+  --color-success: var(--success);
+  --color-success-50: var(--success-50);
+  --color-warning: var(--warning);
+  --color-destructive: var(--error);
+  --color-error: var(--error);
+  --color-error-50: var(--error-50);
+  --color-ink: var(--ink);
+
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.25rem;
+  --radius-2xl: 1.5rem;
+
+  --shadow-card: 0px 2px 8px -2px rgba(15, 76, 129, 0.06), 0px 1px 3px 0px rgba(15, 76, 129, 0.04);
+  --shadow-raised: 0px 8px 24px -4px rgba(15, 76, 129, 0.12), 0px 4px 8px -2px rgba(15, 76, 129, 0.06);
+  --shadow-float: 0px 16px 32px -6px rgba(15, 76, 129, 0.16);
+}
+
+:root {
+  color-scheme: light;
+  --background: #f5f9fc;
+  --card: #ffffff;
+  --foreground: #0b1f33;
+  --muted-foreground: #475569;
+  --border: #d9e4ee;
+  --primary: #1769aa;
+  --primary-dark: #0f4c81;
+  --primary-100: #d3e6f6;
+  --primary-50: #eaf3fb;
+  --accent: #ff8a3d;
+  --accent-50: #ffe8d9;
+  --success: #15803d;
+  --success-50: #dcfce7;
+  --warning: #b45309;
+  --error: #b91c1c;
+  --error-50: #fdecea;
+  --ink: #1f3246;
+  --radius: 1rem;
+}
+
+/* Modo Sol: aumenta o contraste para uso sob luz solar direta */
+.sun-mode {
+  --background: #ffffff;
+  --muted-foreground: #1f2a37;
+  --border: #9fb3c8;
+  --primary: #0f4c81;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    @apply font-sans;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-heading;
+  }
+}
